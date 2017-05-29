@@ -30,8 +30,8 @@ If you do not specify the optional parameters above the default ones will be loa
 ```
 HUBOT_CIRCUIT_ADDRESS="0.0.0.0"  
 HUBOT_CIRCUIT_PORT="8181"  
-HUBOT_CIRCUIT_REST_API_URL="https://eu.yourcircuit.com/v2"  
-HUBOT_CIRCUIT_SCOPE="READ_USER_PROFILE,READ_CONVERSATIONS,WRITE_CONVERSATIONS"
+HUBOT_CIRCUIT_REST_API_URL="https://eu.yourcircuit.com/rest"  
+HUBOT_CIRCUIT_SCOPE="ALL"
 ```
 
 #### Run hubot
