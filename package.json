@@ -1,0 +1,36 @@
+{
+  "name": "hubot-circuit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/circuit.coffee",
+  "scripts": {
+    "test": "coffeelint src/circuit.coffee && mocha -c --full-trace --compilers coffee:coffee-script/register --require coffee-coverage/register-istanbul --reporter spec test/*.coffee && istanbul report text-summary lcov",
+    "coveralls": "istanbul report text-summary lcov && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "parent-require": "^1.0.0",
+    "request": "^2.81.0"
+  },
+  "peerDependencies": {
+    "hubot": ">=2.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "coffee-coverage": "^2.0.0",
+    "coffee-script": "^1.12.5",
+    "coffeelint": "^1.16.0",
+    "coveralls": "^2.13.1",
+    "hubot": "^2.19.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "proxyquire": "^1.7.11",
+    "sinon": "~2.1.0",
+    "sinon-chai": "^2.9.0",
+    "supertest": "^3.0.0"
+  }
+}
