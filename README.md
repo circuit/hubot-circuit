@@ -1,8 +1,8 @@
 # hubot-circuit
 
-[![CircleCI](https://circleci.com/bb/breadboard/hubot-circuit.svg?style=shield)](https://circleci.com/bb/breadboard/hubot-circuit)
-[![Coverage Status](https://coveralls.io/repos/bitbucket/breadboard/hubot-circuit/badge.svg)](https://coveralls.io/bitbucket/breadboard/hubot-circuit)
-[![Dependency Status](https://gemnasium.com/badges/bitbucket.org/breadboard/hubot-circuit.svg)](https://gemnasium.com/bitbucket.org/breadboard/hubot-circuit)
+[![CircleCI](https://circleci.com/gh/circuit/hubot-circuit.svg?style=shield)](https://circleci.com/gh/circuit/hubot-circuit)
+[![Coverage Status](https://coveralls.io/repos/github/circuit/hubot-circuit/badge.svg)](https://coveralls.io/github/circuit/hubot-circuit)
+
 
 ## Description
 This is the [Circuit](http://circuit.com) adapter for [hubot](http://hubot.github.com). Now, you can create your own bots in Circuit and have them easily configured through hubot. 
@@ -10,6 +10,10 @@ This is the [Circuit](http://circuit.com) adapter for [hubot](http://hubot.githu
 #### Configuration
 
 * Start by creating a [bot application](https://hubot.github.com/docs/#getting-started-with-hubot)
+* Add hubot-circuit as a dependency to your package.json, since it is not available through npm yet.  
+```
+"hubot-circuit": "https://github.com/circuit/hubot-circuit"
+```
 * Create a Circuit client credentials application
 * Get the **client_id** and **client_secret**
 * Export necessary environment variables. The Circuit adapter requires 3 environment variables:
