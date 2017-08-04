@@ -1,7 +1,7 @@
 {
   "name": "hubot-circuit",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Circuit adapter for hubot",
   "main": "src/circuit.coffee",
   "scripts": {
     "test": "coffeelint src/circuit.coffee && mocha -c --full-trace --compilers coffee:coffee-script/register --require coffee-coverage/register-istanbul --reporter spec test/*.coffee && istanbul report text-summary lcov",
