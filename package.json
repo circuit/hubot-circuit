@@ -7,8 +7,16 @@
     "test": "coffeelint src/circuit.coffee && mocha -c --full-trace --compilers coffee:coffee-script/register --require coffee-coverage/register-istanbul --reporter spec test/*.coffee && istanbul report text-summary lcov",
     "coveralls": "istanbul report text-summary lcov && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Unify Inc.",
+  "license": "Apache-2.0",
+  "contributors": [
+    "Bettina Topali <despoina.topali@unify.com>",
+    "Eleni Dimitropoulou <eleni.dimitropoulou@unify.com>",
+    "Theodoros Psychogios <theodoros.psychogios@unify.com>"
+  ],
+  "engines": {
+    "node": ">= 4.8.4"
+  },
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
