@@ -97,7 +97,7 @@ class CircuitBot extends Adapter
         auth:
           user: @conf.clientId
           pass: @conf.clientSecret
-        body: JSON.stringify
+        form:
           grant_type : 'client_credentials',
           client_id  : @conf.clientId,
           client_secret : @conf.clientSecret,
@@ -107,7 +107,7 @@ class CircuitBot extends Adapter
       # Get access token
       request.post options, (err, res, body) =>
 
-        if err or res.statusCode > 400
+        if err or res.statusCode >= 400
           @log.error "error: #{err}, statusCode: #{res.statusCode}, #{body}"
           reject(err)
           return
@@ -129,7 +129,7 @@ class CircuitBot extends Adapter
 
       request.get uri: URL.GET_PROFILE, (err, res, body) =>
 
-        if err or res.statusCode > 400
+        if err or res.statusCode >= 400
           @log.error "error: #{err}, statusCode: #{res.statusCode}, #{body}"
           reject(err)
           return
@@ -162,7 +162,7 @@ class CircuitBot extends Adapter
       @log.info 'sending http to:', url
       request.get url, (err, res, body) =>
 
-        if err or res.statusCode > 400
+        if err or res.statusCode >= 400
           @log.error "error: #{err}, statusCode: #{res.statusCode}, #{body}"
           reject(err)
           return
@@ -187,7 +187,7 @@ class CircuitBot extends Adapter
       # Register webhooks
       request.post options, (err, res, body) =>
 
-        if err or res.statusCode > 400
+        if err or res.statusCode >= 400
           @log.error "error: #{err}, statusCode: #{res.statusCode}, #{body}"
           reject(err)
           return
@@ -284,7 +284,7 @@ class CircuitBot extends Adapter
     @log.info 'sending http to:', options.uri
     request.post options, (err, res, body) =>
 
-      if err or res.statusCode > 400
+      if err or res.statusCode >= 400
         @log.error "error: #{err}, statusCode: #{res.statusCode}, #{body}"
         return
 
