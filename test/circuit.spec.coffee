@@ -189,7 +189,7 @@ describe 'Circuit adapter', ->
                 user: @circuitBot.conf.clientId
                 pass: @circuitBot.conf.clientSecret
               uri: '/oauth/token'
-              body: JSON.stringify
+              form:
                 grant_type: 'client_credentials'
                 client_id: @circuitBot.conf.clientId
                 client_secret: @circuitBot.conf.clientSecret

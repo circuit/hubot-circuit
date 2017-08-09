@@ -1,6 +1,6 @@
 {
   "name": "hubot-circuit",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A Circuit adapter for hubot",
   "main": "src/circuit.coffee",
   "scripts": {
@@ -16,6 +16,10 @@
   ],
   "engines": {
     "node": ">= 4.8.4"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/circuit/hubot-circuit.git"
   },
   "dependencies": {
     "body-parser": "^1.17.1",
